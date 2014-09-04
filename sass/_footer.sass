@@ -1,0 +1,85 @@
+.footer
+	background: #67747D 
+	.footer__in
+		@extend %in
+		+clr
+		padding-top: 17px 
+	.footer__left
+		width: 657px 
+		float: left
+		margin-left: 15px 
+	.footer__right
+		width: 316px 
+		float: right
+		margin-right: 15px 
+	.footer__counters
+		padding-bottom: 24px 
+		padding-top: 10px 
+	.footer__nav
+		clear: both
+		border-top: 1px solid #8A959D 
+		list-style: none
+		padding: 13px 0 
+		margin: 0 15px 
+		li
+			display: inline-block
+		a
+			font-size: 13px 
+			text-decoration: none
+			color: #fff
+			display: inline-block
+			margin-right: 45px 
+	.footer__gp
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px 
+		color: #FFBB23
+		font-weight: bold
+		margin-left: 10px  
+		text-decoration: none
+	.footer__director
+		font-size: 15px 
+		color: #fff 
+		dt
+			font-size: 12px 
+			color: #B4BDC2
+			margin-bottom: 4px  
+			a
+				color: #fff 
+		dd
+			font-size: 15px 
+			color: #fff 
+			strong
+				display: block
+	.socials
+		display: inline-block
+		vertical-align: middle
+		font-size: 0 
+		margin-bottom: 12px 
+		li
+			display: inline-block
+		a
+			display: inline-block
+			margin-right: 10px 
+			text-decoration: none
+			vertical-align: middle
+		@each $s in tw,vk,fb,gp,rss
+			.socials__#{$s} a		
+				+s(#{$s})
+				&:hover
+					+s(#{$s}h)
+	.footer__copy
+		color: #FFF
+		font-size: 15px
+		margin-bottom: 10px 
+	.footer__text
+		font-size: 12px 
+		color: #B4BCC2 
+		margin-bottom: 10px 
+		p
+			margin-bottom: 6px 
+		a
+			text-decoration: none
+			color: #fff 
+			
+			

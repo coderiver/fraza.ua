@@ -1,0 +1,132 @@
+.header
+	@extend %in
+	padding: 8px 0 20px
+	+clr 
+	.header__left
+		width: 30%
+		float: left
+		font-family: Georgia,serif
+		color: #9BA5AB  
+		padding-top: 5px
+		.header__meta
+			margin-bottom: 12px  
+		a
+			text-decoration: none
+			border-bottom: 1px dashed #7C8D99 
+			color: #7C8D99 
+		strong
+			color: #67747D 
+		.search
+			border-left: 3px solid #DEE5EA 
+			padding: 3px 0 3px 13px 
+			.search__input
+				font-weight: bold
+				font-size: 12px 
+				color: #82939E
+				width: 60px  
+				border: none
+				box-shadow: none
+				+transition(all .2s ease)
+				&:focus
+					width: 100px 
+			.search__button
+				+s(arrright)
+				display: inline-block
+				vertical-align: middle
+
+	.header__right
+		width: 30%
+		float: right
+		text-align: right
+		font-family: Georgia,serif 
+		padding-top: 4px 
+		a
+			text-decoration: none
+			border-bottom: 1px dashed #7C8D99 
+			color: #7C8D99 
+		.socials
+			list-style: none
+			font-size: 0 
+			li
+				display: inline-block
+				padding-bottom: 8px 
+				border-bottom: 3px solid #fff
+				margin-left: 12px 
+				&:hover
+					border-color: #FFB71E 
+			a
+				display: inline-block
+				text-decoration: none
+				border: none
+				vertical-align: middle
+				
+			@each $s in tw,vk,fb,gp,rss
+				.socials__#{$s} a		
+					+s(#{$s}1)
+	.header__logo 
+		+s(logo)
+		+hide-text
+		margin: 0 auto 
+		display: block
+
+
+.nav
+	.nav__mainin,.nav__subin
+		@extend %in
+		position: relative
+	.nav__sub
+		background: #67747D 
+		height: 30px 
+		line-height: 30px
+		font-family: Georgia,serif 
+		.nav__right
+			position: absolute
+			right: 0
+			top: 0
+			font-size: 12px   
+			color: #B9C4CB 
+			a
+				margin-left: 14px 
+				font-size: 12px 
+				color: #B9C4CB
+				text-decoration: none 
+	.nav__special
+		dt
+			display: inline-block
+			font-size: 12px 
+			font-weight: bold
+			color: #FFB71E
+		dd,ul,li,a
+			display: inline-block
+		a
+			margin-left: 16px 
+			color: #fff
+			text-decoration: none
+			font-size: 12px  
+	.nav__main
+		background: #EDEDED 
+		font-family: Georgia,serif
+		font-size: 16px  
+		ul
+			list-style: none
+			font-size: 0
+			position: relative
+			left: -13px 
+		li
+			display: inline-block
+		a
+			display: inline-block
+			padding: 0 13px
+			height: 46px
+			line-height: 46px 
+			color: #5F6C75
+			text-decoration: none   
+			font-size: 16px 
+			&:hover
+				background: #DADBDD 
+			&.is-active
+				color: #fff
+				background: #67747D  
+				box-shadow: inset 0 5px 0 #FFB71E
+		
+
